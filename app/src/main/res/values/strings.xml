@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Good Trip</string>
+
+    <!--Tela de login-->
+    <string name="usuarioTextView">USUÁRIO</string>
+    <string name="senhaTextView">SENHA</string>
+    <string name="entrar">ENTRAR</string>
 </resources>
