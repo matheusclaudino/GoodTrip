@@ -6,8 +6,13 @@
     <string name="senhaTextView">SENHA</string>
     <string name="entrar">ENTRAR</string>
 
+    <!--Tela DashBoard-->
+    <string name="novo_gasto">Novo Gasto</string>
+    <string name="nova_viagem">Nova Viagem</string>
+    <string name="minhas_viagens">Minhas Viagens</string>
+    <string name="configuracoes">Configurações</string>
 
     <!-- Mensagens de Erro -->
-
     <string name="erro_autentificacao">Usuário e/ou senha inválidos!</string>
+
 </resources>
