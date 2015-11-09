@@ -5,4 +5,9 @@
     <string name="usuarioTextView">USUÁRIO</string>
     <string name="senhaTextView">SENHA</string>
     <string name="entrar">ENTRAR</string>
+
+
+    <!-- Mensagens de Erro -->
+
+    <string name="erro_autentificacao">Usuário e/ou senha inválidos!</string>
 </resources>
