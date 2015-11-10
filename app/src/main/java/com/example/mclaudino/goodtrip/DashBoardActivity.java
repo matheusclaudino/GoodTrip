@@ -1,6 +1,7 @@
 package com.example.mclaudino.goodtrip;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,8 +18,15 @@ public class DashBoardActivity extends Activity {
 
     public void selecionarOpcao(View view){
 
-        TextView textView = (TextView) view;
+        switch(view.getId()){
+            case R.id.nova_viagem:
+                Intent intent = new Intent(this, ViagemActivity.class);
+                startActivity(intent);
+                break;
+        }
+
+        /*TextView textView = (TextView) view;
         String opcao = "Opção: " + textView.getText().toString();
-        Toast.makeText(DashBoardActivity.this, opcao, Toast.LENGTH_SHORT).show();
+        Toast.makeText(DashBoardActivity.this, opcao, Toast.LENGTH_SHORT).show();*/
     }
 }
