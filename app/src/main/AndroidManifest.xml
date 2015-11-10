@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".DashBoardActivity" >
         </activity>
+        <activity android:name=".ViagemActivity" >
+        </activity>
     </application>
 
 </manifest>
