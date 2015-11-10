@@ -71,7 +71,7 @@
 
             <Button
                 android:id="@+id/data_saida"
-                android:onClike="selecionarData"
+                android:onClick="selecionarData"
                 android:text="@string/selecione"/>
 
         </TableRow>
@@ -97,7 +97,7 @@
         <Button
             android:onClick="salvarViagem"
             android:text="@string/salvar"/>
-        
+
     </TableLayout>
 
 </ScrollView>
