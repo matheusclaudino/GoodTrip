@@ -12,6 +12,18 @@
     <string name="minhas_viagens">Minhas Viagens</string>
     <string name="configuracoes">Configurações</string>
 
+    <!--Tela de Nova Viagem-->
+    <string name="destino">Destino</string>
+    <string name="tipo_viagem">Tipo da viagem</string>
+    <string name="lazer">Lazer</string>
+    <string name="negocio">Negócio</string>
+    <string name="data_chegada">Data de chegada</string>
+    <string name="data_saida">Data de saída</string>
+    <string name="selecione">Selecione</string>
+    <string name="orcamento">Orçamento</string>
+    <string name="qtd_pessoas">Quantidade de pessoas</string>
+    <string name="salvar">Salvar</string>
+
     <!-- Mensagens de Erro -->
     <string name="erro_autentificacao">Usuário e/ou senha inválidos!</string>
 
