@@ -20,8 +20,11 @@ public class DashBoardActivity extends Activity {
 
         switch(view.getId()){
             case R.id.nova_viagem:
-                Intent intent = new Intent(this, ViagemActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(this, ViagemActivity.class));
+                break;
+
+            case R.id.novo_gasto:
+                startActivity(new Intent(this, GastoActivity.class));
                 break;
         }
 
