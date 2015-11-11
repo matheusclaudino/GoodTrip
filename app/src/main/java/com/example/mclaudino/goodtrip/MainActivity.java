@@ -25,14 +25,14 @@ public class MainActivity extends Activity {
         String usuario = this.usuario_edit_text.getText().toString();
         String senha = this.senha_edit_text.getText().toString();
 
-        if(usuario.equals("matheus") && senha.equals("4321")){
+        //if(usuario.equals("") && senha.equals("")){
             Intent intent = new Intent(this, DashBoardActivity.class);
             startActivity(intent);
 
-        } else{
+        /*} else{
             String msgErro = getString(R.string.erro_autentificacao);
             Toast.makeText(MainActivity.this,msgErro ,Toast.LENGTH_LONG ).show();
 
-        }
+        }*/
     }
 }
