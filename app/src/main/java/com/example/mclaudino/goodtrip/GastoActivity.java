@@ -3,7 +3,11 @@ package com.example.mclaudino.goodtrip;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -64,4 +68,26 @@ public class GastoActivity extends Activity {
         }
 
     };
+
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.gasto_activity_menu, menu);
+        return true;
+    }
+
+    public boolean onMenuItemSelected(int featuredId, MenuItem item){
+        switch(item.getItemId()){
+            case R.id.novo_gasto:
+                startActivity(new Intent(this, GastoActivity.class));
+                return true;
+
+            case R.id.remover_gasto:
+                //remover do banco
+                return true;
+
+            default:
+                return super.onMenuItemSelected(featuredId, item);
+        }
+    }
 }
