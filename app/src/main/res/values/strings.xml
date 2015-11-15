@@ -50,6 +50,17 @@
     <!--Menu Contexto Gasto-->
     <string name="remover_gasto">Remover</string>
 
+    <!--AlertDialog ViagemListActivity-->
+    <string name="editar">Editar</string>
+    <string name="gastos_realizados">Gastos</string>
+    <string name="opcoes">Opções</string>
+
+    <!--AlerDialog Confirmação ViagemListActivity-->
+    <string name="confirmacao_exclusao_viagem">Deseja confirmar a exclusão da VIAGEM ?</string>
+    <string name="sim">SIM</string>
+    <string name="nao">NÃO</string>
+    <string name="cancelar">CANCELAR</string>
+
 
     <!-- Mensagens de Erro -->
     <string name="erro_autentificacao">Usuário e/ou senha inválidos!</string>
