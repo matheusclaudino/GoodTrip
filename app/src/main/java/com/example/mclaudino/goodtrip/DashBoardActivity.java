@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,4 +40,18 @@ public class DashBoardActivity extends Activity {
         String opcao = "Opção: " + textView.getText().toString();
         Toast.makeText(DashBoardActivity.this, opcao, Toast.LENGTH_SHORT).show();*/
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.dashboard_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onMenuItemSelected(int featuredId, MenuItem item){
+        finish();
+        return true;
+    }
+
 }
