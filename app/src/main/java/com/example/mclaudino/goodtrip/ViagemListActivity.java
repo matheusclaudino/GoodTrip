@@ -1,6 +1,5 @@
 package com.example.mclaudino.goodtrip;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
@@ -8,30 +7,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 public class ViagemListActivity extends ListActivity implements AdapterView.OnItemClickListener, DialogInterface.OnClickListener {
 
     private List<Map<String, Object>> viagens;
     private AlertDialog alertDialog;
-    private AlertDialog dialogCondirmacao;
+    private AlertDialog dialogConfirmacao;
     private int viagemSelecionada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.lista_viagem);
+
+        //Progress Bar
+        //String[] de = {"imagem", "destino", "data", "total", "barraProgresso"};
+        //int[] para = {R.id.img_tipo_viagem, R.id.destino, R.id.data, R.id.gasto, R.id.barraProgresso};
 
         String[] de = {"imagem", "destino", "data", "total"};
         int[] para = {R.id.img_tipo_viagem, R.id.destino, R.id.data, R.id.gasto};
@@ -44,7 +43,7 @@ public class ViagemListActivity extends ListActivity implements AdapterView.OnIt
         getListView().setOnItemClickListener(this);
 
         this.alertDialog = criaAlertDialog();
-        this.dialogCondirmacao = criaDialogConfirmacao();
+        this.dialogConfirmacao = criaDialogConfirmacao();
     }
 
     @Override
@@ -70,6 +69,8 @@ public class ViagemListActivity extends ListActivity implements AdapterView.OnIt
         item.put("destino", "São Paulo");
         item.put("data", "02/02/2015 a 04/02/2015");
         item.put("total", "Gasto total R$ 314,98");
+        //Progress Bar
+        //item.put("barraProgresso", new Double[]{500.0, 450.0, 314.98});
         viagens.add(item);
 
         item = new HashMap<String, Object>();
@@ -77,6 +78,8 @@ public class ViagemListActivity extends ListActivity implements AdapterView.OnIt
         item.put("destino", "Maceió");
         item.put("data", "14/05/2015 a 22/05/2015");
         item.put("total", "Gasto total R$ 25834,67");
+        //Progress Bar
+        //item.put("barraProgresso", new Double[]{30000.0, 28000.0, 25834.67});
         viagens.add(item);
 
         return viagens;
@@ -112,7 +115,7 @@ public class ViagemListActivity extends ListActivity implements AdapterView.OnIt
              break;
 
          case 3:
-             dialogCondirmacao.show();
+             dialogConfirmacao.show();
              break;
 
          case DialogInterface.BUTTON_POSITIVE:
@@ -121,7 +124,7 @@ public class ViagemListActivity extends ListActivity implements AdapterView.OnIt
              break;
 
          case DialogInterface.BUTTON_NEGATIVE:
-             dialogCondirmacao.dismiss();
+             dialogConfirmacao.dismiss();
              break;
      }
     }
@@ -133,5 +136,20 @@ public class ViagemListActivity extends ListActivity implements AdapterView.OnIt
         builder.setNegativeButton(getString(R.string.nao), this);
 
         return builder.create();
+    }
+
+    //Progress Bar
+    public boolean setViewValue(View view, Object data, String textRepresentation){
+
+            if(view.getId() == R.id.barraProgresso){
+                Double valores[] = (Double[]) data;
+                ProgressBar progressBar = (ProgressBar) view;
+                progressBar.setMax(valores[0].intValue());
+                progressBar.setSecondaryProgress(valores[1].intValue());
+                progressBar.setProgress(valores[2].intValue());
+
+                return true;
+            }
+        return false;
     }
 }
