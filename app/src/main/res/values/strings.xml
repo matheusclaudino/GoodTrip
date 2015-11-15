@@ -41,6 +41,16 @@
     </string-array>
 
 
+    <!--Menu Dashboard -->
+    <string name="sair">Sair</string>
+
+    <!--Options Menu Viagem-->
+    <string name="remover_viagem">Remover</string>
+
+    <!--Menu Contexto Gasto-->
+    <string name="remover_gasto">Remover</string>
+
+
     <!-- Mensagens de Erro -->
     <string name="erro_autentificacao">Usuário e/ou senha inválidos!</string>
 
